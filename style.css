@@ -1,0 +1,91 @@
+section,
+ol {
+    margin: 1em 5em;
+}
+
+.bid {
+    margin-left: 7em;
+}
+
+img {
+    width: 30%;
+    margin: 5em;
+}
+
+.slut-datum {
+    color: orange;
+}
+
+.first-price {
+    background-color: yellow;
+}
+
+tr {
+    margin: 1em 15em;
+}
+
+.right {
+    float: left;
+    margin: 0 5em;
+}
+
+.left {
+    float: left;
+}
+
+footer {
+    clear: both;
+}
+
+.ol1 {
+    margin-bottom: 15em;
+}
+
+.ol2 {
+    margin-bottom: 10em;
+    visibility: hidden;
+}
+
+.ol3 {
+    margin-bottom: 15em;
+    visibility: hidden;
+}
+
+.ol4 {
+    margin-bottom: 10em;
+    visibility: hidden;
+}
+
+.ol5 {
+    margin-bottom: 10em;
+    visibility: hidden;
+}
+
+.ol6 {
+    margin-bottom: 15em;
+    visibility: hidden;
+}
+
+.ol7 {
+    margin-bottom: 10em;
+    visibility: hidden;
+}
+
+.ol8 {
+    margin-bottom: 12em;
+    visibility: hidden;
+}
+
+.ol9 {
+    visibility: hidden;
+}
+
+.display {
+    visibility: visible;
+}
+
+.bid-value {
+    border: 1px solid #59baf7;
+    margin-left: 20em;
+    padding: 1em;
+}

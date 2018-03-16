@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Post</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="center">
+            <img src="images/svg/music.svg" class="svg-logo" alt="image">
+        </div>
+        <div class="center">
+            <input class="text-info" id="search-auctions" type="search" placeholder="Search for auctions ">
+
+        </div>
+        <div class="center" data-toggle="buttons">
+            <label class="btn-info " id="date-btn">
+                          <button autocomplete="off" id="date-check">
+                          Slutdatum</button>
+                        </label>
+            <label class="btn-info" id="price-btn">
+                          <button autocomplete="off" id="price-check">
+                          Utropspris</button>
+                        </label>
+            <h4 class="hidden" id="auction-heading">Auktioner</h4>
+        </div>
+    </div>
+    <div id="auction-list" class="left">
+    </div>
+    <div class="right">
+        <br>
+        <h5>Bud</h5>
+        <hr style="border:1px dashed;">
+
+        <ol id="bid-list-1" class="ol1">
+        </ol>
+        <ol id="bid-list-337" class="ol2">
+        </ol>
+        <ol id="bid-list-343" class="ol3">
+        </ol>
+        <ol id="bid-list-345" class="ol4">
+        </ol>
+        <ol id="bid-list-346" class="ol5">
+        </ol>
+        <ol id="bid-list-347" class="ol6">
+        </ol>
+        <ol id="bid-list-349" class="ol7">
+        </ol>
+        <ol id="bid-list-397" class="ol8">
+        </ol>
+        <ol id="bid-list-398" class="ol9">
+        </ol>
+    </div>
+
+    <footer class="footer-section">
+        <div class="container footer-container">
+            <section class="center footer-content">
+                <br>
+                <hr>
+                <p>Nackowskis Auktioner, 2018</p>
+            </section>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="bid.js"></script>
+</body>
+
+</html>
