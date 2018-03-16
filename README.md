@@ -4,7 +4,7 @@
 Nackowskis online auktioner. 
 http://nackowskis.azurewebsites.net/api/
 
-## Krav för att lösningen skall bli godkänd: 
+## Krav: 
 
 * All data måste vara aktuell och hämtas via web api anrop.
 
