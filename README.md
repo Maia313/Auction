@@ -1,7 +1,7 @@
 # Auction-site
 
 ## Beskrivning
-Nackowskis online auktioner. 
+Nackowskis online auktioner. Apidata från:
 http://nackowskis.azurewebsites.net/api/
 
 ## Krav: 
