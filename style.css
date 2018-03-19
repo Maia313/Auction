@@ -1,0 +1,86 @@
+body {
+    background: #fdf9fc;
+}
+
+section,
+ol {
+    margin: 1em 5em;
+}
+
+.bid {
+    margin-left: 7em;
+}
+
+img {
+    margin: 5em;
+}
+
+.sald {
+    margin: 0;
+    float: right;
+}
+
+.slut-datum {
+    color: orange;
+}
+
+.first-price {
+    background-color: yellow;
+}
+
+tr {
+    margin: 1em 15em;
+}
+
+.right {
+    float: left;
+    margin: 0 2em;
+    padding: 0 2em;
+}
+
+.left {
+    float: left;
+}
+
+footer {
+    clear: both;
+}
+
+.ol {
+    margin-bottom: 15em;
+    margin-right: 10em;
+}
+
+.bid-value {
+    border: 1px solid #59baf7;
+    margin-left: 20em;
+    padding: 1em;
+}
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+    0%,
+    100% {
+        transform: rotate(0)
+    }
+    20%,
+    60% {
+        transform: rotate(-25deg)
+    }
+    40%,
+    80% {
+        transform: rotate(10deg)
+    }
+}
+
+@media (max-width:500px) {
+    .github-corner:hover .octo-arm {
+        animation: none
+    }
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+}
