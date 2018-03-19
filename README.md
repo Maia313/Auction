@@ -1,8 +1,7 @@
-# Auction website
+## Auktion webbsida: Nackowskis online auktioner
 
-## Beskrivning av funktionalitet som ska läggas till
+### Beskrivning av funktionalitet som ska läggas till
 
-Nackowskis online auktioner.
 
 * All data måste vara aktuell och hämtas via web api anrop.
 
