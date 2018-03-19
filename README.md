@@ -1,10 +1,8 @@
 # Auction website
 
-## Beskrivning
-Nackowskis online auktioner. Apidata från:
-http://nackowskis.azurewebsites.net/api/
+## Beskrivning av funktionalitet som ska läggas till
 
-## Krav: 
+Nackowskis online auktioner.
 
 * All data måste vara aktuell och hämtas via web api anrop.
 
