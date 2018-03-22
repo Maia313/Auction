@@ -2,11 +2,11 @@ document.getElementById('submit-btn').addEventListener('click', createAuction);
 
 function createAuction() {
     // get inputs values
-    let title= document.getElementById('title').value;
-    let description = document.getElementById('description').value;
-    let startDate = document.getElementById('start-date').value;
-    let endDate = document.getElementById('end-date').value;
-    let price = document.getElementById('price').value;
+    const title= document.getElementById('title').value;
+    const description = document.getElementById('description').value;
+    const startDate = document.getElementById('start-date').value;
+    const endDate = document.getElementById('end-date').value;
+    const price = document.getElementById('price').value;
   
     // create JSON object with all data
     let data =  {
@@ -18,9 +18,11 @@ function createAuction() {
       SlutDatum: endDate,
       Gruppkod: 100
     };
+    console.log('data.............',data);
+    
 
     //post data if all fields are filled
-    if(title === "" || description === "" || price === "" || startDate === "" || endDate === "") {
+    if(!title || !description || price || startDate || endDate) {
       alert("Fill in all the fields");
     } else {
       return fetch("http://nackowskis.azurewebsites.net/api/Auktion/100",{
@@ -30,14 +32,14 @@ function createAuction() {
             'Accept': 'application/json, text/plain, */*',
             'Content-Type': 'application/json'
           }
-        }).then( function(data) {
-          console.log('data.............', data);
+        }).then( function(response) {
+          console.log('response.............', response);
         })
-        .catch(function(error) {
-          console.log('error.............',error);
+        .catch(function(title) {
+          
         });
+        
       }
-      alert("Auction created")
     
   } 
 
