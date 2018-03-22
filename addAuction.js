@@ -10,21 +10,20 @@ function createAuction() {
   
     // create JSON object with all data
     let data =  {
-      "AuktionID": 22,
-      "Titel": title,
-      "Beskrivning": description,
-      "Utropspris": price,
-      "StartDatum": startDate,
-      "SlutDatum": endDate,
-      "Gruppkod": 100
+      AuktionID: 22,
+      Titel: title,
+      Beskrivning: description,
+      Utropspris: price,
+      StartDatum: startDate,
+      SlutDatum: endDate,
+      Gruppkod: 100
     };
 
     //post data if all fields are filled
-    if(title == "" || description == "" || price == "" || startDate == "" || endDate == "") {
+    if(title === "" || description === "" || price === "" || startDate === "" || endDate === "") {
       alert("Fill in all the fields");
     } else {
-      async function postData(url, data){
-        fetch("http://nackowskis.azurewebsites.net/api/Auktion/100",{
+      return fetch("http://nackowskis.azurewebsites.net/api/Auktion/100",{
           method: 'POST',
           body: JSON.stringify(data),
           headers: {
@@ -32,11 +31,14 @@ function createAuction() {
             'Content-Type': 'application/json'
           }
         }).then( function(data) {
-          console.log('Request success:');
+          console.log('data.............', data);
+        })
+        .catch(function(error) {
+          console.log('error.............',error);
         });
       }
       alert("Auction created")
-    }
+    
   } 
 
   
