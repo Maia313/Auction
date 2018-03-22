@@ -9,7 +9,7 @@ function createAuction() {
     const price = document.getElementById('price').value;
   
     // create JSON object with all data
-    let data =  {
+    const data =  {
       AuktionID: 22,
       Titel: title,
       Beskrivning: description,
@@ -22,7 +22,7 @@ function createAuction() {
     
 
     //post data if all fields are filled
-    if(!title || !description || price || startDate || endDate) {
+    if(!title || !description || !price || !startDate || !endDate) {
       alert("Fill in all the fields");
     } else {
       return fetch("http://nackowskis.azurewebsites.net/api/Auktion/100",{
@@ -35,8 +35,8 @@ function createAuction() {
         }).then( function(response) {
           console.log('response.............', response);
         })
-        .catch(function(title) {
-          
+        .catch(function(error) {
+          console.log('error.............', error);
         });
         
       }
