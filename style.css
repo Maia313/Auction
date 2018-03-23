@@ -1,0 +1,140 @@
+body {
+    background: #fdf9fc;
+   
+}
+
+section{
+margin-left:6em;
+}
+
+section .left,
+ol {
+    margin: 1em 8em;
+}
+
+
+img {
+    margin: 5em;
+}
+
+.sald {
+    margin: 0;
+    float: right;
+}
+
+.slut-datum {
+    color: orange;
+}
+
+.first-price {
+    background-color: yellow;
+}
+
+
+.bid-info {
+    float: left;
+    padding: 0 3em;
+    margin-right: 5em;
+    margin-top: 5em;
+    background-color: #0b927c;
+    color: #f1c840;
+}
+
+.left {
+    float: left;
+}
+
+.price {
+    margin: 0;
+}
+
+.money {
+    color: #fdf9fc;
+    font-size: 1.5em;
+}
+
+footer {
+    clear: both;
+}
+
+.ol {
+    margin-bottom: 15em;
+    margin-right: 10em;
+}
+
+.bid-value {
+    border: 1px solid #59baf7;
+    margin-left: 15em;
+    padding: 1em;
+}
+
+.github-corner:hover .octo-arm {
+    animation: octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+    0%,
+    100% {
+        transform: rotate(0)
+    }
+    20%,
+    60% {
+        transform: rotate(-25deg)
+    }
+    40%,
+    80% {
+        transform: rotate(10deg)
+    }
+}
+
+@media (max-width:500px) {
+    .github-corner:hover .octo-arm {
+        animation: none
+    }
+    .github-corner .octo-arm {
+        animation: octocat-wave 560ms ease-in-out
+    }
+}
+
+.btn-sort:hover {
+    background: yellow;
+    border-radius: 0.5em;
+}
+
+
+.hidden{
+    visibility:hidden;
+}
+/*.bid-1{
+    visibility:hidden;
+}
+
+.bid-337{
+    visibility:hidden;
+}
+
+.bid-343{
+    visibility:hidden;
+}
+
+.bid-345{
+    visibility:hidden;
+}
+
+.bid-346{
+    visibility:hidden;
+}
+
+.bid-347{
+    visibility:hidden;
+}
+.bid-349{
+    visibility:hidden;
+}
+
+.bid-397{
+    visibility:hidden;
+}
+.bid-398{
+    visibility:visible;
+}*/
