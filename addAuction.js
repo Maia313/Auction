@@ -25,7 +25,7 @@ function createAuction() {
     if(!title || !description || !price || !startDate || !endDate) {
       alert("Fill in all the fields");
     } else {
-      return fetch("http://nackowskis.azurewebsites.net/api/Auktion/100",{
+      return fetch("https://nackowskis.azurewebsites.net/api/Auktion/100",{
           method: 'POST',
           body: JSON.stringify(data),
           headers: {
