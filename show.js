@@ -1,7 +1,7 @@
 //
 
 async function getBidsHtmlForAuction(auctionItem){
-	const bids = await fetch('http://nackowskis.azurewebsites.net/api/Bud/100/' + auctionItem.AuktionID);
+	const bids = await fetch('https://nackowskis.azurewebsites.net/api/Bud/100/' + auctionItem.AuktionID);
 	const bidList = await bids.json();
 	const today = new Date();
 
@@ -64,7 +64,7 @@ async function getAuctionHtml (auctionItem) {
 
 //auctions
 async function getAuctions() {
-    const resp = await fetch('http://nackowskis.azurewebsites.net/api/Auktion/100/');
+    const resp = await fetch('https://nackowskis.azurewebsites.net/api/Auktion/100/');
     const auctionList = await resp.json();
 
 		const auctionPromiseList = auctionList.map(async auctionItem => await getAuctionHtml(auctionItem));
