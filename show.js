@@ -1,4 +1,4 @@
-//
+//bids
 
 async function getBidsHtmlForAuction(auctionItem){
 	const bids = await fetch('https://nackowskis.azurewebsites.net/api/Bud/100/' + auctionItem.AuktionID);
@@ -9,20 +9,22 @@ async function getBidsHtmlForAuction(auctionItem){
 	bidHtml += `<div class="bid-info wrapper bid-${auctionItem.AuktionID}"><h5>Bud</h5><hr style="border:3px dashed;">`;
 	if(new Date(auctionItem.SlutDatum) >= today) {
 	bidList.map(bidItem => {
-        //while(auctionItem.AuktionID==bidItem.AuktionID){
+        
             bidHtml +=`<div class="price">Summa - <span class="money"> ${bidItem.Summa}</span> $</div>`;
             if(auctionItem.AuktionID!==bidItem.AuktionID)
             bidHtml+=`</div>`;
 
             //div id="your-bid"
 	    });
-    } else {
+    } else if (new Date(auctionItem.SlutDatum) < today){
         bidList.sort(function(a, b) {
             return a.Utropspris - b.Utropspris;
         });
         const bidItem=bidList[bidList.length-1];
             bidHtml +=`<div class="price">Vinnande bud - <span class="money"> ${bidItem.Summa}</span> $</div>`; 
                
+    } else{
+        bidHtml +=`<div class="price">Vinnande bud - <span class="money"> ${bidItem.Summa=''}</span> $</div>`; 
     }
 
 	return bidHtml;
@@ -72,11 +74,27 @@ async function getAuctions() {
 		const auctionPromiseList = auctionList.map(async auctionItem => await getAuctionHtml(auctionItem));
 		
 		const auctionListHtml = await Promise.all(auctionPromiseList);
-		console.log(auctionListHtml);
+		//console.log(auctionListHtml);
 
 		document.getElementById('auction-list').innerHTML = auctionListHtml.join('');
 }
 
+
+
+
+//search
+$('#search-auctions').on('keyup', function() {
+    document.getElementById('bid-list').innerHTML = '';
+    let searchWord = $(this).val().toLowerCase();
+    $(".auction-section-item").each(function() {
+        let cardInfo = $(this).text().toLowerCase();
+        $(this).closest('section')[cardInfo.indexOf(searchWord) !== -1 ? 'show' : 'hide']();
+    });
+
+    return displayBids();
+});
+
+getAuctions();
 
 //bids
 /*function displayBids() {
@@ -120,16 +138,3 @@ function getBids(id) {
             return addBidHtml(bidList);
         });
 }*/
-
-//search
-$('#search-auctions').on('keyup', function() {
-    document.getElementById('bid-list').innerHTML = '';
-    let searchWord = $(this).val().toLowerCase();
-    $(".auction-section-item").each(function() {
-        let cardInfo = $(this).text().toLowerCase();
-        $(this).closest('section')[cardInfo.indexOf(searchWord) !== -1 ? 'show' : 'hide']();
-    });
-
-    return displayBids();
-});
-getAuctions();
