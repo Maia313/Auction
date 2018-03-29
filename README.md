@@ -4,7 +4,7 @@
 
 API - CRUD
 
-(...)[ https://maia313.github.io/Auction/]
+[...](https://maia313.github.io/Auction/)
 
 
 
