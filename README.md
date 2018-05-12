@@ -2,9 +2,7 @@
 
 #### Nackowskis online auktioner
 
-API - CRUD
-
-[Look here...](https://maia313.github.io/Auction/)
+[Search auctions...](https://maia313.github.io/Auction/ 'Click to see the livepage')
 
 
 
